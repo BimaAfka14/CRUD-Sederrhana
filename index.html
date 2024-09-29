@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Link ke file CSS eksternal -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <button>Logout</button>
+      </header>
+
+      <div class="main">
+        <aside>
+          <h2>Admin Panel</h2>
+          <nav>
+            <ul>
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="#">Mahasiswa</a></li>
+              <li><a href="#">Setting</a></li>
+            </ul>
+          </nav>
+        </aside>
+        <div class="content">
+          <h2>Daftar Mahasiswa</h2>
+          <button id="btn-tambah">Tambah Mahasiswa</button>
+          <table>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>A11.2022.12345</td>
+                <td>Arc Warden</td>
+                <td>
+                  <button class="btn-edit">Edit</button>
+                  <button class="btn-hapus">Hapus</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>A11.2022.23456</td>
+                <td>Brisleback</td>
+                <td>
+                  <button class="btn-edit">Edit</button>
+                  <button class="btn-hapus">Hapus</button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>A11.2022.34567</td>
+                <td>Clinkz</td>
+                <td>
+                  <button class="btn-edit">Edit</button>
+                  <button class="btn-hapus">Hapus</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer>&copy; 2024 Pemsik</footer>
+
+      <!-- Modal Tambah -->
+      <div id="modal-tambah" class="modal-overlay">
+        <div class="modal">
+          <span class="close-modal">&times;</span>
+          <h2>Tambah Mahasiswa</h2>
+          <form id="form-tambah">
+            <label for="nim">NIM:</label>
+            <input type="text" id="nim-tambah" required />
+
+            <label for="name">Nama:</label>
+            <input type="text" id="name-tambah" required />
+
+            <div class="button-group">
+              <button type="button" id="btn-batal-tambah">Batal</button>
+              <button type="submit">Simpan</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Modal Edit -->
+      <div id="modal-edit" class="modal-overlay">
+        <div class="modal">
+          <span class="close-modal">&times;</span>
+          <h2>Edit Mahasiswa</h2>
+          <form id="form-edit">
+            <label for="nim">NIM:</label>
+            <input type="text" id="nim-edit" required />
+
+            <label for="name">Nama:</label>
+            <input type="text" id="name-edit" required />
+
+            <div class="button-group">
+              <button type="button" id="btn-batal-edit">Batal</button>
+              <button type="submit">Simpan Perubahan</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Link ke file JavaScript eksternal -->
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>

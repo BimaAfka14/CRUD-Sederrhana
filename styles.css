@@ -1,0 +1,294 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+header {
+  background-color: #ff7f50;
+  text-align: right;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header button {
+  background-color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+header button:hover {
+  background-color: #f0f0f0;
+}
+
+.main {
+  display: flex;
+  background-color: #e0ffff;
+  flex-grow: 1;
+}
+
+aside {
+  background-color: #afeeee;
+  width: 220px;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+aside h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+aside nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside nav ul li {
+  margin-bottom: 15px;
+}
+
+aside nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+aside nav ul li a:hover {
+  color: #ff7f50;
+}
+
+footer {
+  background-color: #ff7f50;
+  padding: 15px 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  padding: 20px;
+  background-color: #dcdcdc;
+  flex: 1;
+}
+
+.content h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.content button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.content button:hover {
+  background-color: #45a049;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ccc;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.btn-edit,
+.btn-hapus {
+  background-color: #ff7f50;
+  color: #fff;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.btn-edit:hover {
+  background-color: #ff6347;
+}
+
+.btn-hapus {
+  background-color: #dc143c;
+}
+
+.btn-hapus:hover {
+  background-color: #c1121f;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+.modal-overlay.show {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 8px;
+  width: 350px;
+  max-width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.modal label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: bold;
+}
+
+.modal input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.modal .button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal .button-group button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.modal .button-group #btn-batal-tambah,
+.modal .button-group #btn-batal-edit {
+  background-color: #ccc;
+  color: #333;
+}
+
+.modal .button-group #btn-batal-tambah:hover,
+.modal .button-group #btn-batal-edit:hover {
+  background-color: #b3b3b3;
+}
+
+.modal .button-group button[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.modal .button-group button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+  color: #ff0000;
+}
+
+@media (max-width: 500px) {
+  .modal {
+    width: 90%;
+    padding: 20px;
+  }
+
+  header,
+  footer {
+    padding: 10px 15px;
+  }
+
+  aside {
+    width: 180px;
+    padding: 15px;
+  }
+}
