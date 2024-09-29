@@ -37,11 +37,11 @@
       <li>
         To clone this repository, use the following command.
         <br>
-        <pre><code>git clone https://github.com/yourusername/simple-crud.git</code></pre>
+        <pre><code>git clone https://github.com/BimaAfka14/CRUD-Sederrhana.git</code></pre>
       </li>
       <li>
         Navigate to the project directory.
-        <pre><code>cd simple-crud</code></pre>
+        <pre><code>cd CRUD-Sederrhana</code></pre>
       </li>
       <li>
         Open the <code>index.html</code> file in your web browser.
